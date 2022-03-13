@@ -50,10 +50,10 @@
           </div>
           <% }else {
           %>
-        <div class="justify-content-center head"><h1><b>We do not share any servers. <br /> Invite me to one of your servers by clicking on the button below:</b></h1>
+        <div class="justify-content-center head"><h1 style="font-size: 30px;"><b>We do not share any servers. <br /> Invite me to one of your servers by clicking on the button below!</b></h1>
           <p>
             <br />
-            <button style="font-size: 50px;"
+            <button style="font-size: 20px;"
             onclick="window.open('https://discord.com/api/oauth2/authorize?client_id=<%= botClient.user.id %>&permissions=8&scope=bot%20applications.commands', '_blank')"
             class="btn btn-success" type="button"><i class="iconify" data-icon="carbon:add-filled"></i>
             Invite me!</button>
@@ -79,9 +79,9 @@
             "
           />
           <h4 style="margin-top: 5%">
-            <img
+            <img class="logo"
               src="<%= botClient.user.displayAvatarURL({size: 4096}) %>"
-              style="width: 4%; margin-top: -0.5%"
+              style="width: 2%; margin-top: -0.5%"
             />
             <span style="font-size: 40px"><%= botClient.user.username %></span>
           </h4>

@@ -52,14 +52,14 @@
         <% if(user && user.id) { %>
         <button
           class="btn btn-danger btn-sm"
-          style="letter-spacing: 0.1em; font-weight: 750; width: 100%"
+          style=" font-size: 20px;  width: 100%; margin-top:5%; margin-bottom: 5%; "
           onclick="location.href='/logout'"
           type="button"
         >
           <img
             src="https://cdn.discordapp.com/avatars/<%=user.id%>/<%=user.avatar%>.png"
             ,
-            style="width: 50px; margin-bottom: 3%; border-radius: 50%"
+            style="width: 30px; border-radius: 100%"
             alt="LOGO"
           />
           Sign out
@@ -67,7 +67,7 @@
         <% }else { %>
         <button
           class="btn btn-success btn-sm"
-          style="letter-spacing: 0.1em; font-weight: 750; width: 100%"
+          style="font-size: 30px;  width: 100%; margin-top:5%; margin-bottom: 5%; "
           onclick="location.href='/login'"
           type="button"
         >
