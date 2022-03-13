@@ -18,12 +18,12 @@ body {
   border: solid 1px #57f287;
 }
 .navbar-brand img {
-  width: 80px;
+  width: 50px;
   border-radius: 5px;
 }
 .nav-item {
   padding-left: 30px;
-  font-size: 32px;
+  font-size: 20px;
 }
 .nav-item a {
   text-decoration: none;
@@ -32,6 +32,11 @@ body {
 .nav-item a:hover {
   color: #ffffff;
 }
+
+.logo{
+  border-radius: 5px;
+}
+
 .nav-item b {
   text-decoration: none;
   color: #41cf48 !important;

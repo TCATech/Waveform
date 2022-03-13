@@ -1,14 +1,14 @@
 {
   "website": {
     "support": "https://discord.gg/svHAbSTzmn",
-    "domain": "https://musicful.tk"
+    "domain": "http://localhost:3000"
   },
   "config": {
     "http": {
       "port": 3000
     },
-    "callback": "https://musicful.tk/callback",
-    "clientID": "942673349337841704",
-    "secret": "tQLCz06e8ST5J5z3tG_iYBoziEI-IVvC"
+    "callback": "http://localhost:3000/callback",
+    "clientID": "ur client id 😁",
+    "secret": "ur client secret"
   }
 }

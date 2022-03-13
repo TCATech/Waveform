@@ -72,12 +72,6 @@ module.exports = (client) => {
   // initialize passport middleware.
   app.use(passport.initialize());
   app.use(passport.session());
-  app.set("trust proxy", 1); // were using cloudflare, if change it BESURE TO CHANGE THIS
-  const baseApiLimiter = ratelimit({
-    windowMs: 2 * 60 * 1000,
-    max: 120,
-  });
-  app.use("/api", baseApiLimiter);
   app.set("view engine", "ejs");
   app.set("views", path.join(__dirname, "./views"));
 
@@ -111,19 +105,8 @@ module.exports = (client) => {
    * @api API START
    */
 
-  app.get("/api/create/key", (req, res) => {
-    var id = crypto.randomBytes(20).toString("hex");
-    db.set("apiKeys");
-    res.send("Your api key is \n " + id);
-  });
 
-  app.get("/api/test/keys/:key", (req, res) => {
-    if (req.params.key == db.get("key")) {
-      res.send("OK");
-    } else {
-      res.send("FAIL");
-    }
-  });
+
   /**
    * @api API END
    */
