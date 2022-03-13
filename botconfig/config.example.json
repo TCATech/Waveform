@@ -1,0 +1,16 @@
+{
+  "token": "INSERT TOKEN HERE",
+  "prefix": "+",
+  "youtubeCookie": "INSERT YOUTUBE COOKIE HERE",
+  "spotify_api": {
+    "enabled": true,
+    "clientSecret": "SPOTIFY CLIENT SECRET HERE",
+    "clientId": "SPOTIFY CLIENT ID HERE"
+  },
+  "loadSlashsGlobal": false,
+  "status": {
+    "enabled": true,
+    "name": "+help | musicful.tk",
+    "type": "WATCHING"
+  }
+}
