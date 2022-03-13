@@ -1,0 +1,66 @@
+{
+  "dependencies": {
+    "@discordjs/builders": "^0.9.0",
+    "@discordjs/opus": "^0.7.0",
+    "@discordjs/voice": "^0.7.5",
+    "@distube/soundcloud": "^1.0.0",
+    "@distube/spotify": "^1.0.0",
+    "@distube/ytdl-core": "^4.10.0",
+    "colors": "^1.4.0",
+    "cpu-stat": "^2.0.1",
+    "crypto": "^1.0.1",
+    "discord.js": "^13.3.1",
+    "distube": "^3.0.3",
+    "ejs": "^3.1.6",
+    "enmap": "^5.8.7",
+    "express": "^4.17.1",
+    "express-rate-limit": "^6.2.1",
+    "express-session": "^1.17.2",
+    "ffmpeg-static": "^4.4.0",
+    "http": "^0.0.1-security",
+    "libsodium-wrappers": "^0.7.9",
+    "memorystore": "^1.6.6",
+    "os": "^0.1.2",
+    "passport": "^0.5.0",
+    "passport-discord": "^0.1.4",
+    "session": "^0.1.0",
+    "url": "^0.11.0"
+  },
+  "name": "musicful",
+  "description": "nobody asked for this",
+  "version": "8.1.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "node index.js",
+    "start": "node index.js",
+    "dev": "nodemon index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TCATech/Musicful.git"
+  },
+  "keywords": [
+    "discord",
+    "music",
+    "bot",
+    "spotify",
+    "youtube",
+    "soundcloud",
+    "discordjs",
+    "discordbot",
+    "distube",
+    "bassboost",
+    "noapi",
+    "filters",
+    "nightcore",
+    "yt",
+    "radio",
+    "radiostations"
+  ],
+  "author": "Tomato#6966",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TCATech/Musicful/issues"
+  },
+  "homepage": "https://musicful.tk"
+}
