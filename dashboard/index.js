@@ -16,16 +16,10 @@ const ratelimit = require("express-rate-limit");
 const crypto = require("crypto");
 
 const enmap = require("enmap");
-const db = new enmap({
-  name: "apikeys",
-  autoFetch: true,
-  dataDir: "./databases/api",
-});
 
 /**
  *  STARTING THE WEBSITE
  * @param {*} client THE DISCORD BOT CLIENT
- * @param {*} api API
  */
 module.exports = (client) => {
   db.set("apiKeys", []);
@@ -104,8 +98,6 @@ module.exports = (client) => {
   /**
    * @api API START
    */
-
-
 
   /**
    * @api API END

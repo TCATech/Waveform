@@ -2,3 +2,6 @@
 node_modules
 botconfig/config.json
 dashboard/settings.json
+enmap.sqlite
+enmap.sqlite-shm
+enmap.sqlite-wal
