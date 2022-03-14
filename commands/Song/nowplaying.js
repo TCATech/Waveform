@@ -70,44 +70,7 @@ module.exports = {
                     require(`../../dashboard/settings.json`).website.domain
                   }/queue/${newQueue.id})`
                 )
-                .addField(`💡 Requested by:`, `>>> ${newTrack.user}`, true)
-                .addField(`🔊 Volume:`, `>>> \`${newQueue.volume}%\``, true)
-                .addField(
-                  `🌀 Queue:`,
-                  `>>> \`${newQueue.songs.length} song${
-                    newQueue.songs.length > 1 ? "s" : ""
-                  }\`\n\`${newQueue.formattedDuration}\``,
-                  true
-                )
-                .addField(
-                  `♾ Loop:`,
-                  `>>> ${
-                    newQueue.repeatMode
-                      ? newQueue.repeatMode === 2
-                        ? `${client.allEmojis.check_mark}\` Queue\``
-                        : `${client.allEmojis.check_mark} \` Song\``
-                      : `${client.allEmojis.x}`
-                  }`,
-                  true
-                )
-                .addField(
-                  `❔ Filter${newQueue.filters.length > 0 ? `s` : ``}:`,
-                  `>>> ${
-                    newQueue.filters && newQueue.filters.length > 0
-                      ? `${newQueue.filters.map((f) => `\`${f}\``).join(`, `)}`
-                      : `${client.allEmojis.x}`
-                  }`,
-                  newQueue.filters.length > 4 ? false : true
-                )
-                .addField(
-                  `🎧 DJ roles${
-                    client.settings.get(newQueue.id, `djroles`).length > 1
-                      ? `s`
-                      : ``
-                  }:`,
-                  `>>> ${djs}`,
-                  newQueue.filters.length > 4 ? false : true
-                )
+                .addField(`💡 Requested by:`, `>>> ${newTrack.user}`)
                 .addField(
                   `⏱ Duration:`,
                   `\`${newQueue.formattedCurrentTime}\` ${createBar(
@@ -124,12 +87,7 @@ module.exports = {
                 .setThumbnail(
                   `https://img.youtube.com/vi/${newTrack.id}/mqdefault.jpg`
                 )
-                .setFooter(
-                  `Played in: ${guild.name}`,
-                  guild.iconURL({
-                    dynamic: true,
-                  })
-                )
+                .setFooter(ee.footertext, ee.footericon)
                 .setTimestamp(),
             ],
           })
