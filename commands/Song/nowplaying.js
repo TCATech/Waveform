@@ -67,7 +67,7 @@ module.exports = {
                 .setColor(ee.color)
                 .setDescription(
                   `[See the queue on the **DASHBOARD**!](${
-                    require(`../dashboard/settings.json`).website.domain
+                    require(`../../dashboard/settings.json`).website.domain
                   }/queue/${newQueue.id})`
                 )
                 .addField(`💡 Requested by:`, `>>> ${newTrack.user}`, true)
