@@ -22,7 +22,6 @@ const enmap = require("enmap");
  * @param {*} client THE DISCORD BOT CLIENT
  */
 module.exports = (client) => {
-  db.set("apiKeys", []);
   //Start teh website
   console.log("Loading DashBoard settings".brigthGreen);
   const settings = require("./settings.json");
