@@ -1,3 +1,4 @@
 .prettierignore
 node_modules
 botconfig/config.json
+dashboard/settings.json

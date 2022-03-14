@@ -1,0 +1,14 @@
+{
+  "website": {
+    "support": "https://discord.gg/svHAbSTzmn",
+    "domain": "https://example.com"
+  },
+  "config": {
+    "http": {
+      "port": 3000
+    },
+    "callback": "https://example.com/callback",
+    "clientID": "",
+    "secret": ""
+  }
+}
