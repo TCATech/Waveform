@@ -1,11 +1,11 @@
 {
-  "token": "INSERT TOKEN HERE",
+  "token": "",
   "prefix": "+",
-  "youtubeCookie": "INSERT YOUTUBE COOKIE HERE",
+  "youtubeCookie": "",
   "spotify_api": {
     "enabled": true,
-    "clientSecret": "SPOTIFY CLIENT SECRET HERE",
-    "clientId": "SPOTIFY CLIENT ID HERE"
+    "clientSecret": "",
+    "clientId": ""
   },
   "loadSlashsGlobal": false,
   "status": {
