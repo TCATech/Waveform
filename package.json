@@ -18,5 +18,19 @@
   "bugs": {
     "url": "https://github.com/TCATech/Musicful/issues"
   },
-  "homepage": "https://musicful.tk"
+  "homepage": "https://musicful.tk",
+  "dependencies": {
+    "@discordjs/opus": "^0.5.3",
+    "@discordjs/voice": "^0.9.0",
+    "@distube/soundcloud": "^1.1.0",
+    "@distube/spotify": "^1.2.1",
+    "@distube/yt-dlp": "^1.0.2",
+    "discord.js": "^13.6.0",
+    "distube": "^3.3.4",
+    "enmap": "^5.9.0",
+    "ffmpeg-static": "^4.4.1",
+    "glob": "^8.0.2",
+    "libsodium-wrappers": "^0.7.10",
+    "util": "^0.12.4"
+  }
 }
