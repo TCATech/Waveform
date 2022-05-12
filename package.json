@@ -1,0 +1,19 @@
+{
+  "name": "musicful",
+  "version": "1.0.0",
+  "description": "The best music bot you could ever use, with the highest audio quality possible.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TCATech/Musicful.git"
+  },
+  "author": "TCA Tech",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/TCATech/Musicful/issues"
+  },
+  "homepage": "https://musicful.tk"
+}
