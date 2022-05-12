@@ -3,6 +3,9 @@
   "version": "1.0.0",
   "description": "The best music bot you could ever use, with the highest audio quality possible.",
   "main": "index.js",
+  "contributors": [
+    "Not TCA"
+  ],
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
