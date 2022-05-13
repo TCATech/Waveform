@@ -1,6 +1,6 @@
-# Musicful v2
+# Musicful v2, now known as Waveform
 
-The up and coming version of Musicful.
+The up and coming version of Musicful, with a fresh new name.
 
 # FAQ
 
