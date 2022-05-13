@@ -3,6 +3,7 @@ const ms = require("ms");
 
 module.exports = {
   name: "ping",
+  description: "Tests the ping of the bot.",
   /**
    *
    * @param {Client} client

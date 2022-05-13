@@ -1,3 +1,5 @@
+// Bot client
+
 const { Client, Collection } = require("discord.js");
 const Enmap = require("enmap");
 var colors = require("colors");
@@ -49,3 +51,31 @@ console.log("\n");
 });
 
 client.login(process.env.TOKEN);
+
+// Distube client
+
+const { DisTube } = require("distube");
+const { SoundCloudPlugin } = require("@distube/soundcloud");
+const { SpotifyPlugin } = require("@distube/spotify");
+const { YtDlpPlugin } = require("@distube/yt-dlp");
+
+client.distube = new DisTube(client, {
+  leaveOnEmpty: true,
+  leaveOnFinish: true,
+  leaveOnStop: true,
+  searchSongs: false,
+  youtubeDL: false,
+  updateYouTubeDL: false,
+  plugins: [
+    new SoundCloudPlugin(),
+    new SpotifyPlugin({
+      emitEventsAfterFetching: true,
+    }),
+    new YtDlpPlugin(),
+  ],
+  savePreviousSongs: true,
+});
+
+["distubeEvents"].forEach((handler) => {
+  require(`./handlers/${handler}`)(client);
+});
