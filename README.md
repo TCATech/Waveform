@@ -11,7 +11,7 @@ The up and coming version of Musicful, with a fresh new name.
 **A:** We are going to try and make it as similar as version 1, but since we want to move away from Musicium, most of it will be different. <br /> <br />
 
 **Q:** What features *might* get removed? <br />
-**A:** Filters. And that's about it. <br /> <br />
+**A:** Nothing. <br /> <br />
 
 **Q:** What features do you plan on adding that other music bots don't have? <br />
 **A:** Being able to play a song that someone is listening to on Spotify, and a customizable per-user favorites playlist.
