@@ -5,8 +5,14 @@ const { escapeRegex } = require("../utils/functions");
 client.on("messageCreate", async (message) => {
   if (message.author.bot || !message.guild) return;
 
-  message.prefix = client.config.prefix;
-  message.color = client.config.color;
+  client.settings.ensure(message.guild.id, {
+    prefix: client.config.prefix,
+    defaultVolume: 50,
+    defaultFilters: ["clear", "bassboost6"],
+    djRoles: [],
+  });
+
+  message.prefix = client.settings.get(message.guild.id, "prefix");
 
   const prefixRegex = new RegExp(
     `^(<@!?${client.user.id}>|${escapeRegex(message.prefix)})\\s*`
@@ -25,15 +31,13 @@ client.on("messageCreate", async (message) => {
       return message.reply({
         embeds: [
           new MessageEmbed()
-            .setTitle("Hey there!")
-            .setDescription(
-              "My prefix in this server is `" +
-                message.prefix +
-                "`. Use `" +
-                message.prefix +
-                "help` to see all of my commands!"
+            .setTitle(
+              "👋 My prefix for this server is: `" + message.prefix + "`"
             )
-            .setColor(message.color)
+            .setDescription(
+              "Use `" + message.prefix + "help` to see all commands."
+            )
+            .setColor(client.config.color)
             .setFooter({
               text: client.user.username,
               iconURL: client.user.displayAvatarURL({ dynamic: true }),
@@ -68,7 +72,7 @@ client.on("messageCreate", async (message) => {
             )
             .join(", ")}\``
         )
-        .setColor(message.color)
+        .setColor(client.config.color)
         .setFooter({
           text: client.user.username,
           iconURL: client.user.displayAvatarURL({ dynamic: true }),
@@ -97,7 +101,7 @@ client.on("messageCreate", async (message) => {
             )
             .join(", ")}\``
         )
-        .setColor(message.color)
+        .setColor(client.config.color)
         .setFooter({
           text: client.user.username,
           iconURL: client.user.displayAvatarURL({ dynamic: true }),
@@ -111,16 +115,13 @@ client.on("messageCreate", async (message) => {
 
     await command.run(client, message, args);
   } catch (err) {
+    console.log(err);
     message.reply({
       embeds: [
         new MessageEmbed()
-          .setTitle("Uh oh!")
-          .setDescription("An error has occured.")
-          .addField("Error", err.toString())
-          .setFooter({
-            text: client.user.username,
-            iconURL: client.user.displayAvatarURL({ dynamic: true }),
-          }),
+          .setTitle(`${client.emotes.x} An error has occured.`)
+          .setDescription(`\`\`\`${err}\`\`\``)
+          .setColor(client.config.color),
       ],
     });
   }

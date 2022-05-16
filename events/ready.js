@@ -17,28 +17,28 @@ client.on("ready", () => {
   console.log("\n");
   console.log(
     `     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`
-      .bold.brightGreen
+      .bold.brightMagenta
   );
   console.log(
-    `     ┃ `.bold.brightGreen +
+    `     ┃ `.bold.brightMagenta +
       " ".repeat(-1 + 69 - ` ┃ `.length) +
-      "┃".bold.brightGreen
+      "┃".bold.brightMagenta
   );
   console.log(
-    `     ┃ `.bold.brightGreen +
-      `${client.user.tag} is now online!`.bold.brightGreen +
+    `     ┃ `.bold.brightMagenta +
+      `${client.user.tag} is now online!`.bold.brightMagenta +
       " ".repeat(
         -1 + 69 - ` ┃ `.length - `${client.user.tag} is now online!`.length
       ) +
-      "┃".bold.brightGreen
+      "┃".bold.brightMagenta
   );
   console.log(
-    `     ┃ `.bold.brightGreen +
+    `     ┃ `.bold.brightMagenta +
       " ".repeat(-1 + 69 - ` ┃ `.length) +
-      "┃".bold.brightGreen
+      "┃".bold.brightMagenta
   );
   console.log(
     `     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
-      .bold.brightGreen
+      .bold.brightMagenta
   );
 });

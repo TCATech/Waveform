@@ -11,26 +11,31 @@ module.exports = {
    * @param {String[]} args
    */
   run: async (client, message, args) => {
-    const res = await message.reply({
-      content: "Pinging...",
-    });
-
-    const ping = res.createdTimestamp - message.createdTimestamp;
-
-    const embed = new MessageEmbed()
-      .setTitle("Pong! 🏓")
-      .addField("Bot Latency", `${ping}ms`, true)
-      .addField("API Latency", `${client.ws.ping}ms`, true)
-      .addField("Uptime", ms(client.uptime), false)
-      .setFooter({
-        text: client.user.username,
-        iconURL: client.user.displayAvatarURL({ dynamic: true }),
+    let oldate = Math.floor(Date.now() / 10);
+    await message
+      .reply({
+        embeds: [
+          new MessageEmbed()
+            .setTitle(`${client.emotes.loading} Pinging...`)
+            .setColor(client.config.color),
+        ],
       })
-      .setColor(client.config.color)
-      .setTimestamp();
-    res.edit({
-      content: "\u200B",
-      embeds: [embed],
-    });
+      .then((res) => {
+        const ping = res.createdTimestamp - message.createdTimestamp;
+
+        let newtime = Math.floor(Math.floor(Date.now() / 10) - oldate);
+        if (newtime < 0) newtime *= -1;
+        res.edit({
+          embeds: [
+            new MessageEmbed()
+              .setTitle("Pong! 🏓")
+              .addField("Bot Latency", `${ping}ms`, true)
+              .addField("API Latency", `${client.ws.ping}ms`, true)
+              .addField("Host Latency", `${Math.floor(newtime)}ms`, true)
+              .addField("Uptime", ms(client.uptime, { long: true }), false)
+              .setColor(client.config.color),
+          ],
+        });
+      });
   },
 };
