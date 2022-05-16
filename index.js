@@ -53,7 +53,7 @@ console.log(
 );
 console.log("\n");
 
-["commands", "slashCommands", "events"].forEach((handler) => {
+["commands", "events"].forEach((handler) => {
   require(`./handlers/${handler}`)(client);
 });
 
