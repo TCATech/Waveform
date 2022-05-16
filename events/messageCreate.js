@@ -37,12 +37,7 @@ client.on("messageCreate", async (message) => {
             .setDescription(
               "Use `" + message.prefix + "help` to see all commands."
             )
-            .setColor(client.config.color)
-            .setFooter({
-              text: client.user.username,
-              iconURL: client.user.displayAvatarURL({ dynamic: true }),
-            })
-            .setTimestamp(),
+            .setColor(client.config.color),
         ],
       });
     }
@@ -59,28 +54,29 @@ client.on("messageCreate", async (message) => {
       command.userPerms &&
       !message.member.permissions.has(command.userPerms)
     ) {
-      const userPermsEmbed = new MessageEmbed()
-        .setTitle("Uh oh!")
-        .setDescription(
-          `You need the following permissions to use this command: \`${command.userPerms
-            .map(
-              (value) =>
-                `${
-                  value[0].toUpperCase() +
-                  value.toLowerCase().slice(1).replace(/_/gi, " ")
-                }`
-            )
-            .join(", ")}\``
-        )
-        .setColor(client.config.color)
-        .setFooter({
-          text: client.user.username,
-          iconURL: client.user.displayAvatarURL({ dynamic: true }),
-        })
-        .setTimestamp();
-
       return message.reply({
-        embeds: [userPermsEmbed],
+        embeds: [
+          new MessageEmbed()
+            .setTitle(
+              `${client.emotes.x} You do not have permission to use this command.`
+            )
+            .setDescription(
+              `You need to obtain the following permissions: \`${command.userPerms
+                .map(
+                  (value) =>
+                    `${
+                      value[0].toUpperCase() +
+                      value
+                        .toLowerCase()
+                        .slice(1)
+                        .replace(/_/gi, " ")
+                        .replace("guild", "server")
+                    }`
+                )
+                .join(", ")}\``
+            )
+            .setColor(client.config.color),
+        ],
       });
     }
 
@@ -88,28 +84,23 @@ client.on("messageCreate", async (message) => {
       command.botPerms &&
       !message.guild.me.permissions.has(command.botPerms)
     ) {
-      const botPermsEmbed = new MessageEmbed()
-        .setTitle("Uh oh!")
-        .setDescription(
-          `Please give me the following permissions: \`${command.botPerms
-            .map(
-              (value) =>
-                `${
-                  value[0].toUpperCase() +
-                  value.toLowerCase().slice(1).replace(/_/gi, " ")
-                }`
-            )
-            .join(", ")}\``
-        )
-        .setColor(client.config.color)
-        .setFooter({
-          text: client.user.username,
-          iconURL: client.user.displayAvatarURL({ dynamic: true }),
-        })
-        .setTimestamp();
-
       return message.reply({
-        embeds: [botPermsEmbed],
+        embeds: [
+          new MessageEmbed()
+            .setTitle(`${client.emotes.x} I do not have enough permissions`)
+            .setDescription(
+              `Kindly give me the following permissions: \`${command.botPerms
+                .map(
+                  (value) =>
+                    `${
+                      value[0].toUpperCase() +
+                      value.toLowerCase().slice(1).replace(/_/gi, " ")
+                    }`
+                )
+                .join(", ")}\``
+            )
+            .setColor(client.config.color),
+        ],
       });
     }
 
