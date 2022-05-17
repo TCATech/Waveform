@@ -3,6 +3,7 @@ const { Client, Message } = require("discord.js");
 module.exports = {
   name: "pause",
   description: "Pauses the current song.",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

@@ -5,6 +5,7 @@ module.exports = {
   description: "Changes the loop mode.",
   aliases: ["repeat", "l"],
   usage: "[off, song, or queue]",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

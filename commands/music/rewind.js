@@ -5,6 +5,7 @@ module.exports = {
   name: "rewind",
   description: "Rewinds the currently playing song.",
   aliases: ["backward", "rwd", "bwd"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

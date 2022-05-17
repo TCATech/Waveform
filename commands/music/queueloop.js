@@ -4,6 +4,7 @@ module.exports = {
   name: "queueloop",
   description: "Enables or disables the queue loop.",
   aliases: ["ql"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

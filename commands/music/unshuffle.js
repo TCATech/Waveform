@@ -3,6 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "unshuffle",
   description: "Unshuffles/unrandomizes the queue.",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

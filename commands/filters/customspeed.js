@@ -6,6 +6,7 @@ module.exports = {
   description: "Sets a custom speed with a custom amount.",
   aliases: ["speed", "changespeed", "cspeed"],
   usage: "<amount>",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

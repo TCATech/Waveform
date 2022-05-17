@@ -4,6 +4,7 @@ module.exports = {
   name: "restart",
   description: "Restarts the current song.",
   aliases: ["replay"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

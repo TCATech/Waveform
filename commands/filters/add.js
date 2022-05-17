@@ -6,6 +6,7 @@ module.exports = {
   description: "Add a filter to the queue.",
   aliases: ["addfilters", "add", "addf", "af"],
   usage: "<filter(s)> (use spaces to seperate filters)",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

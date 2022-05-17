@@ -4,6 +4,7 @@ module.exports = {
   name: "clearqueue",
   description: "Clears the entire queue.",
   aliases: ["clearq", "clearque", "clearqueu"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

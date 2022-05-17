@@ -4,6 +4,7 @@ module.exports = {
   name: "addsimilar",
   description: "Adds a similar/related song to the current one in the queue.",
   aliases: ["adds", "addrelated", "addr"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

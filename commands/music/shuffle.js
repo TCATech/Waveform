@@ -4,6 +4,7 @@ module.exports = {
   name: "shuffle",
   description: "Shuffles/randomizes the queue.",
   aliases: ["mix", "randomize", "random"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

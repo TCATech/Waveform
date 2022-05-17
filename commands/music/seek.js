@@ -6,6 +6,7 @@ module.exports = {
   description: "Changes the position/seek of the song.",
   aliases: ["forward", "fwd"],
   usage: "<time>",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

@@ -4,6 +4,7 @@ module.exports = {
   name: "previous",
   description: "Plays the previous song.",
   aliases: ["pre", "prev"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

@@ -1,6 +1,7 @@
 const { MessageEmbed } = require("discord.js");
 const client = require("../index");
 const { escapeRegex } = require("../utils/functions");
+const { check_dj, onCoolDown } = require("../utils/functions");
 
 client.on("messageCreate", async (message) => {
   if (message.author.bot || !message.guild) return;
@@ -103,6 +104,23 @@ client.on("messageCreate", async (message) => {
         ],
       });
     }
+
+    const queue = client.distube.getQueue(message.guild.id);
+    if (
+      command.checkDJ &&
+      queue &&
+      queue.songs.length > 0 &&
+      check_dj(client, message.member, queue.songs[0])
+    )
+      return message.reply({
+        embeds: [
+          new MessageEmbed()
+            .setTitle(
+              `${client.emotes.x} You are not a DJ, or the song requester!`
+            )
+            .setColor(client.config.color),
+        ],
+      });
 
     await command.run(client, message, args);
   } catch (err) {

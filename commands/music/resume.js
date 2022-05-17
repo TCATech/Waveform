@@ -4,6 +4,7 @@ module.exports = {
   name: "resume",
   description: "Resumes the current song.",
   aliases: ["r", "res"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

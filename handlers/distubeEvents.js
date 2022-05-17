@@ -2,6 +2,7 @@ const { MessageEmbed, MessageActionRow, MessageButton } = require("discord.js");
 const config = require("../botconfig/config.json");
 const PlayerMap = new Map();
 let songEditInterval = null;
+const { check_dj } = require("../utils/functions");
 
 module.exports = (client) => {
   client.distube
@@ -114,6 +115,19 @@ module.exports = (client) => {
                       guild.me.voice.channel.id +
                       ">"
                   ),
+              ],
+              ephemeral: true,
+            });
+
+          if (
+            i.customId !== "Favorite" &&
+            check_dj(client, member, newQueue.songs[0])
+          )
+            return i.reply({
+              embeds: [
+                new MessageEmbed()
+                  .setColor("RED")
+                  .setTitle(`❌ You are not a DJ, or the song requester!`),
               ],
               ephemeral: true,
             });

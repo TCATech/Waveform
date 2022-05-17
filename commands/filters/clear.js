@@ -4,6 +4,7 @@ module.exports = {
   name: "clearfilter",
   description: "Clears all filters.",
   aliases: ["clearfilters", "clearf", "cfilters", "cfilter", "clearfilter"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

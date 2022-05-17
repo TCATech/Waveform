@@ -4,6 +4,7 @@ module.exports = {
   name: "songloop",
   description: "Enables or disables the song loop.",
   aliases: ["trackloop", "sl", "tl"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

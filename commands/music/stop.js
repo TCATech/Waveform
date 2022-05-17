@@ -3,6 +3,7 @@ const { Client, Message, MessageEmbed } = require("discord.js");
 module.exports = {
   name: "stop",
   description: "Stops playing and leaves the voice channel.",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

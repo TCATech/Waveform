@@ -15,6 +15,7 @@ module.exports = {
     "custombb",
   ],
   usage: "<gain>",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

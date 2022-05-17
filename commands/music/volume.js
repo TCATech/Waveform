@@ -5,6 +5,7 @@ module.exports = {
   description: "Changes the volume of the song.",
   aliases: ["v"],
   usage: "<new volume>",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

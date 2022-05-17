@@ -6,6 +6,7 @@ module.exports = {
   description: "Removes a filter from the queue.",
   aliases: ["removefilters", "remove", "removef", "rmf"],
   usage: "<filter(s)> (use spaces to seperate filters)",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

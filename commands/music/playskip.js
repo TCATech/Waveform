@@ -6,6 +6,7 @@ module.exports = {
     "Plays a song in a voice channel and skips the currently playing song.",
   aliases: ["ps"],
   usage: "<song name or url>",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

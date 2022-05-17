@@ -4,6 +4,7 @@ module.exports = {
   name: "skip",
   description: "Skips the current song.",
   aliases: ["next"],
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

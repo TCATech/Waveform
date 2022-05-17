@@ -5,6 +5,7 @@ module.exports = {
   description: "Removes a song from the queue.",
   aliases: ["delete", "del", "rem"],
   usage: "<song position>",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

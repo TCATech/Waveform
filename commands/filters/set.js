@@ -5,6 +5,7 @@ module.exports = {
   description: "Overrides all filters.",
   aliases: ["setfilters", "set", "setf"],
   usage: "<filter(s)> (use spaces to seperate filters)",
+  checkDJ: true,
   /**
    * @param {Client} client
    * @param {Message} message

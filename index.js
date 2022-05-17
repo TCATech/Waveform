@@ -16,10 +16,11 @@ module.exports = client;
 
 client.config = require("./botconfig/config.json");
 client.emotes = require("./botconfig/emojis.json");
+
 client.commands = new Collection();
 client.categories = require("fs").readdirSync(`./commands`);
-client.events = new Collection();
-client.slashCommands = new Collection();
+client.cooldowns = new Collection();
+
 client.settings = new Enmap({
   name: "settings",
   dataDir: "./databases/settings",
