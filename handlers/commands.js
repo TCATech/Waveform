@@ -1,4 +1,5 @@
 const { readdirSync } = require("fs");
+const { getTime } = require("../utils/functions");
 module.exports = (client) => {
   let amount = 0;
   readdirSync("./commands/").forEach((directory) => {
@@ -16,5 +17,5 @@ module.exports = (client) => {
       }
     }
   });
-  console.log(`     ${amount} commands loaded`.brightGreen);
+  console.log(`${getTime()} Loaded ${amount} commands!`.brightGreen);
 };

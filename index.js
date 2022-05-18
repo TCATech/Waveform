@@ -1,5 +1,6 @@
 // Bot client
 
+const { getTime } = require("./utils/functions");
 const { Client, Collection } = require("discord.js");
 const Enmap = require("enmap");
 var colors = require("colors");
@@ -27,32 +28,7 @@ client.settings = new Enmap({
 });
 client.maps = new Map();
 
-console.log("\n");
-console.log(
-  `     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`
-    .bold.brightRed
-);
-console.log(
-  `     ┃ `.bold.brightRed +
-    " ".repeat(-1 + 69 - ` ┃ `.length) +
-    "┃".bold.brightRed
-);
-console.log(
-  `     ┃ `.bold.brightRed +
-    "Loading the bot...".bold.brightRed +
-    " ".repeat(-1 + 69 - ` ┃ `.length - "Loading the bot...".length) +
-    "┃".bold.brightRed
-);
-console.log(
-  `     ┃ `.bold.brightRed +
-    " ".repeat(-1 + 69 - ` ┃ `.length) +
-    "┃".bold.brightRed
-);
-console.log(
-  `     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
-    .bold.brightRed
-);
-console.log("\n");
+console.log(`${getTime()} Loading the bot...`.brightRed);
 
 ["commands", "events"].forEach((handler) => {
   require(`./handlers/${handler}`)(client);

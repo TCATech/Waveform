@@ -1,4 +1,5 @@
 const client = require("../index");
+const { getTime } = require("../utils/functions");
 
 client.on("ready", () => {
   setInterval(() => {
@@ -14,31 +15,5 @@ client.on("ready", () => {
     client.user.setActivity(randomStatus, { type: statusType });
   }, 10000);
 
-  console.log("\n");
-  console.log(
-    `     ┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓`
-      .bold.brightMagenta
-  );
-  console.log(
-    `     ┃ `.bold.brightMagenta +
-      " ".repeat(-1 + 69 - ` ┃ `.length) +
-      "┃".bold.brightMagenta
-  );
-  console.log(
-    `     ┃ `.bold.brightMagenta +
-      `${client.user.tag} is now online!`.bold.brightMagenta +
-      " ".repeat(
-        -1 + 69 - ` ┃ `.length - `${client.user.tag} is now online!`.length
-      ) +
-      "┃".bold.brightMagenta
-  );
-  console.log(
-    `     ┃ `.bold.brightMagenta +
-      " ".repeat(-1 + 69 - ` ┃ `.length) +
-      "┃".bold.brightMagenta
-  );
-  console.log(
-    `     ┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛`
-      .bold.brightMagenta
-  );
+  console.log(`${getTime()} Logged in as ${client.user.tag}.`.brightMagenta);
 });

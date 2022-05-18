@@ -1,5 +1,6 @@
 const fs = require("fs");
 const allEvents = [];
+const { getTime } = require("../utils/functions");
 module.exports = async (client) => {
   let amount = 0;
   const event_files = fs
@@ -15,5 +16,5 @@ module.exports = async (client) => {
       console.log(e);
     }
   }
-  console.log(`     ${amount} events loaded`.brightGreen);
+  console.log(`${getTime()} Loaded ${amount} events!`.brightGreen);
 };
