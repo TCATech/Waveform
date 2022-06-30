@@ -1,4 +1,4 @@
-# Musicful v2, now known as Waveform
+# Waveform v1 (formerly Musicful)
 
 The up and coming version of Musicful, with a fresh new name.
 
